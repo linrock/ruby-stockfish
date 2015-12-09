@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+$:.unshift "./lib"
+
+require 'pry'
+require 'stockfish'
+
+
+engine = Stockfish::Engine.new
+
+# puts engine.analyze "rqb2rk1/1p3p2/p1nb1n1p/2pp4/2P4Q/N2P1N2/PP2BPPP/R4RK1 w - - 1 15", { :nodes    => 100000 }
+# puts engine.analyze "2r2rk1/p2q1pbp/4b1p1/1p1p4/3P4/1Q2B1P1/PP3PBP/2RR2K1 w - b6 1 17", { :movetime => 2000   }
+# puts engine.analyze "r3k2r/1bqp1pp1/pp1bp3/8/1PP1PP2/3QB1P1/P2N4/1R3RK1 b kq b3 1 18",  { :depth    => 10     }
+
+# analysis_output = open("test/fixtures/analysis_outputs/multipv_3.txt").read
+# parser = Stockfish::AnalysisParser.new(analysis_output)
+
+binding.pry
