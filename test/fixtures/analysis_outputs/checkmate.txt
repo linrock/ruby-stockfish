@@ -1,0 +1,2 @@
+info depth 0 score mate 0
+bestmove (none)

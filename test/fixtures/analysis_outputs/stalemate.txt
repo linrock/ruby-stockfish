@@ -1,0 +1,2 @@
+info depth 0 score cp 0
+bestmove (none)
