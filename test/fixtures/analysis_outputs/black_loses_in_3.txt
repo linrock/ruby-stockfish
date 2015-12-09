@@ -1,0 +1,13 @@
+info depth 1 seldepth 1 multipv 1 score mate -3 nodes 10 nps 5000 tbhits 0 time 2 pv g7f6
+info depth 2 seldepth 3 multipv 1 score mate -3 nodes 35 nps 17500 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+info depth 3 seldepth 5 multipv 1 score mate -3 nodes 76 nps 38000 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4
+info depth 4 seldepth 7 multipv 1 score mate -3 nodes 112 nps 56000 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+info depth 5 seldepth 7 multipv 1 score mate -3 nodes 144 nps 72000 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+info depth 6 seldepth 7 multipv 1 score mate -3 nodes 174 nps 87000 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+info depth 7 seldepth 7 multipv 1 score mate -3 nodes 219 nps 109500 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+info depth 8 seldepth 7 multipv 1 score mate -3 nodes 263 nps 131500 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+info depth 9 seldepth 7 multipv 1 score mate -3 nodes 309 nps 154500 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+info depth 10 seldepth 7 multipv 1 score mate -3 nodes 352 nps 176000 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+info depth 11 seldepth 7 multipv 1 score mate -3 nodes 430 nps 215000 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+info depth 12 seldepth 7 multipv 1 score mate -3 nodes 575 nps 287500 tbhits 0 time 2 pv g7f6 c3d5 f6g5 f2f4 g5g4 f1e2
+bestmove g7f6 ponder c3d5
