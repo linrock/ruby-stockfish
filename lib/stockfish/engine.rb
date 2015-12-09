@@ -13,7 +13,7 @@ module Stockfish
 
     COMMANDS = %w( uci isready setoption ucinewgame position go stop ponderhit quit )
 
-    def initialize(bin_path = "/usr/local/bin/stockfish")
+    def initialize(bin_path = `which stockfish`)
       @stdin, @stdout, @stderr, @wait_threads = Open3.popen3(bin_path)
       @pid = @wait_threads[:pid]
       @version = @stdout.readline.strip
@@ -43,6 +43,10 @@ module Stockfish
         output << @stdout.readline
       end
       output
+    end
+
+    def multipv(n)
+      execute "setoption name MultiPV value #{n}"
     end
 
     def ready?
