@@ -39,25 +39,25 @@ Stockfish.analyze fen, { :depth => 12, :multipv => 3 }
 
 ## Communicating with the engine
 
-You can also send commands to Stockfish directly
+You can also send [UCI](https://en.wikipedia.org/wiki/Universal_Chess_Interface) commands to Stockfish directly
 
 ```ruby
 engine = Stockfish::Engine.new
 engine.execute "position fen q3r3/3r4/p2p2p1/1p2p1b1/8/P6k/1PP1Q2P/4BRK1 b - - 8 36"
-engine.execute "setoption name MultiPV value 3
+engine.execute "setoption name MultiPV value 3"
 engine.execute "go depth 10"
 ```
 
 
 ## Requirements
 
-Stockfish 6+ must be installed and available in your $PATH
+Stockfish 6+ must be installed and available in your `$PATH`
 
 ```bash
 $ which stockfish
 ```
 
-You can also load a Stockfish binary directly
+Or you can load a Stockfish binary directly
 
 ```ruby
 engine = Stockfish::Engine.new("/usr/local/bin/stockfish")
