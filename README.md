@@ -2,6 +2,7 @@
 
 A ruby client for the [Stockfish](https://stockfishchess.org/) chess engine
 
+
 ## Installation
 
 ```
@@ -13,6 +14,7 @@ Or add it to your application's Gemfile and install via bundler
 ```
 gem 'stockfish'
 ```
+
 
 ## Analyzing positions
 
@@ -28,11 +30,24 @@ Set the search depth (in number of half-moves) you want to use
 Stockfish.analyze fen, { :depth => 12 }
 ```
 
-And request multiple variations if you'd like
+Look at multiple variations by setting a multipv option
 
 ```ruby
-Stockfish.analyze fen, { :depth => 6, :multipv => 3 }
+Stockfish.analyze fen, { :depth => 12, :multipv => 3 }
 ```
+
+
+## Communicating with the engine
+
+You can also send commands to Stockfish directly
+
+```ruby
+engine = Stockfish::Engine.new
+engine.execute "position fen q3r3/3r4/p2p2p1/1p2p1b1/8/P6k/1PP1Q2P/4BRK1 b - - 8 36"
+engine.execute "setoption name MultiPV value 3
+engine.execute "go depth 10"
+```
+
 
 ## Requirements
 
@@ -42,10 +57,10 @@ Stockfish 6+ must be installed and available in your $PATH
 $ which stockfish
 ```
 
-If Stockfish is not in your $PATH, you can pass the path to the Stockfish binary directly
+You can also load a Stockfish binary directly
 
 ```ruby
 engine = Stockfish::Engine.new("/usr/local/bin/stockfish")
 engine.multipv(3)
-engine.analyze fen, { :depth => 6 }
+engine.analyze fen, { :depth => 12 }
 ```

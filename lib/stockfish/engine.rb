@@ -17,13 +17,17 @@ module Stockfish
       @stdin, @stdout, @stderr, @wait_threads = Open3.popen3(bin_path)
       @pid = @wait_threads[:pid]
       @version = @stdout.readline.strip
-      raise InvalidBinary.new("Not a valid Stockfish binary!") unless @version =~ /^Stockfish/
+      unless @version =~ /^Stockfish/
+        raise InvalidBinary.new("Not a valid Stockfish binary!")
+      end
     end
 
     def execute(str)
       command = str.split(" ")[0]
       @stdin.puts str
-      raise InvalidCommand.new(@stdout.readline.strip) unless COMMANDS.include?(command)
+      unless COMMANDS.include?(command)
+        raise InvalidCommand.new(@stdout.readline.strip)
+      end
       output = ""
       case command
       when "uci"
